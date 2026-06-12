@@ -184,7 +184,7 @@ window.SITE = {
       tag: "ZCU102 · ADRV9009",          // small mono label on the card
       featured: true,                     // featured cards are shown larger
       summary: "A 4-channel digital receiver built on two ADRV9009 transceivers, channelizing the wideband input and extracting per-sub-channel information in real time.",
-      thumb: "assets/img/chip.jpg",       // card image (replace with your own)
+      thumb: "assets/img/RFSoC_Revolution.png",       // card image (replace with your own)
       content: [
         { type: "text", value: "This project implements a **4-channel coherent receiver** using two Analog Devices **ADRV9009** wideband transceiver chips on a Xilinx **ZCU102** UltraScale+ MPSoC board. The design captures a wide RF band, then digitally channelizes it into narrow sub-channels for independent processing." },
         { type: "specs", title: "Platform", rows: [
@@ -199,8 +199,7 @@ window.SITE = {
             "Implements a polyphase channelizer in the PL to split the band efficiently.",
             "Extracts and routes sub-channel data to the processing system over high-speed links."
         ]},
-        { type: "text", value: "_Tip: replace the image below with a block diagram or a scope capture of your own — drop it into the `projects-media` folder._" },
-        { type: "image", src: "assets/img/chip.jpg", caption: "Replace with your own diagram, board photo or results plot." }
+        { type: "image", src: "assets/img/RFSoC_Revolution.png", caption: "RFSoC-based multi-channel receiver." }
       ]
     },
 
@@ -235,13 +234,13 @@ window.SITE = {
 
     {
       id: "blind-satellite-receiver",
-      title: "Blind Satellite Signal Receiver",
+      title: "Satellite Signal Receiver",
       tag: "Virtex-6 ML605",
       featured: true,
-      summary: "A complete blind receiver in FPGA — from down-conversion through timing/carrier recovery to Viterbi + Turbo Product Code decoding — recovering content from an unknown satellite link.",
-      thumb: "assets/img/board-texture.jpg",
+      summary: "A complete receiver in FPGA — from down-conversion through timing/carrier recovery to Viterbi + Turbo Product Code decoding — recovering content from an unknown satellite link.",
+      thumb: "assets/img/Const.png",
       content: [
-        { type: "text", value: "A full **blind receiver** implemented end-to-end on a Xilinx **Virtex-6 ML605** board, designed to lock onto and decode a satellite signal with no prior knowledge of its parameters." },
+        { type: "text", value: "A full **receiver** implemented end-to-end on a Xilinx **Virtex-6 ML605** board, designed to lock onto and decode a satellite signal with no prior knowledge of its parameters." },
         { type: "tabs", tabs: [
             { label: "Signal chain", blocks: [
                 { type: "list", items: [
@@ -259,7 +258,9 @@ window.SITE = {
                 ]}
             ]}
         ]},
-        { type: "text", value: "After decoding, custom deframing and descrambling modules recover the underlying bit content of the link." }
+        { type: "text", value: "After decoding, custom deframing and descrambling modules recover the underlying bit content of the link." },
+        { type: "image", src: "assets/img/Const.png", caption: "RFSoC-based receiver." }
+
       ]
     },
 
@@ -269,7 +270,7 @@ window.SITE = {
       tag: "Pure VHDL · Virtex-6",
       featured: false,
       summary: "A family of modems — BPSK, QPSK, 8PSK, 8/16/32QAM — written entirely in VHDL, with the full synchronisation chain, verified on hardware.",
-      thumb: "assets/img/chip-macro.jpg",
+      thumb: "assets/img/Const32.png",
       content: [
         { type: "text", value: "A complete modem family — **BPSK, QPSK, 8PSK, 8QAM, 16QAM and 32QAM** — implemented **purely in VHDL** (no IP black boxes) and verified on a Virtex-6 ML605 evaluation board." },
         { type: "heading", value: "Synchronisation blocks" },
@@ -279,7 +280,8 @@ window.SITE = {
             "Costas-loop / PLL carrier-phase recovery",
             "Frequency-offset compensation"
         ]},
-        { type: "text", value: "Every block was hand-written and bit-true verified against a floating-point reference model before being realised in fixed point on the FPGA." }
+        { type: "text", value: "Every block was hand-written and bit-true verified against a floating-point reference model before being realised in fixed point on the FPGA." },
+        { type: "image", src: "assets/img/Const.png", caption: "RFSoC-based Transceiver." }
       ]
     },
 
@@ -289,7 +291,7 @@ window.SITE = {
       tag: "ZC706 · ZCU106",
       featured: false,
       summary: "End-to-end transmit and receive chains driving Analog Devices 2×2 MIMO transceivers, from QPSK on the AD9361 to 8PSK on the AD9371.",
-      thumb: "assets/img/chip.jpg",
+      thumb: "assets/img/ad9371.png",
       content: [
         { type: "text", value: "Two complete RF links built around Analog Devices 2×2 MIMO front-ends." },
         { type: "specs", title: "Link A", rows: [
@@ -301,7 +303,8 @@ window.SITE = {
             ["Transceiver", "AD9371 (2×2 MIMO)"],
             ["Board", "ZCU106"],
             ["Modulation", "8PSK Tx + Rx chain"]
-        ]}
+        ]},
+        { type: "image", src: "assets/img/ad9371.png", caption: "AD9361/71 Transceiver." }
       ]
     },
 
@@ -311,7 +314,7 @@ window.SITE = {
       tag: "ZC706 · Vivado HLS",
       featured: false,
       summary: "Real-time image processing on Zynq-7000 — object & edge detection accelerated in the PL with xfOpenCV and HLS, controlled from the PS.",
-      thumb: "assets/img/board-texture.jpg",
+      thumb: "assets/img/HLS.png",
       content: [
         { type: "text", value: "A hardware/software co-design on the **Zynq-7000 ZC706**: vision algorithms accelerated in the programmable logic, orchestrated by software on the ARM processing system." },
         { type: "list", items: [
@@ -319,24 +322,8 @@ window.SITE = {
             "Edge detection built with System Generator block-sets.",
             "Image deblurring implemented with Model Composer.",
             "Control and data-flow handled in software (SDK) on the PS."
-        ]}
-      ]
-    },
-
-    {
-      id: "isar-sparse-imaging",
-      title: "3D ISAR Imaging via Sparse Coding (Ph.D.)",
-      tag: "Research · DSP",
-      featured: false,
-      summary: "Multidimensional dictionary-based sparse coding to improve the quality of 3D Inverse Synthetic Aperture Radar images — the core of my doctoral research.",
-      thumb: "assets/img/chip-macro.jpg",
-      content: [
-        { type: "text", value: "My Ph.D. research developed **multidimensional (tensor) dictionary learning** and sparse-coding methods to reconstruct and denoise **3D ISAR** radar images, improving resolution and suppressing noise." },
-        { type: "links", items: [
-            { label: "IET RSN — Image quality improvement (2022)", href: "https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/rsn2.12348" },
-            { label: "IET RSN — Fast dictionary learning (2022)", href: "https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/rsn2.12275" },
-            { label: "IET RSN — Modified generalised SL0 (2020)", href: "https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/iet-rsn.2020.0013" }
-        ]}
+        ]},
+        { type: "image", src: "assets/img/HLS.png", caption: "FPGA Computer Vision." }
       ]
     }
 
