@@ -238,7 +238,7 @@ window.SITE = {
       tag: "Virtex-6 ML605",
       featured: true,
       summary: "A complete receiver in FPGA — from down-conversion through timing/carrier recovery to Viterbi + Turbo Product Code decoding — recovering content from an unknown satellite link.",
-      thumb: "assets/img/Const.png",
+      thumb: "assets/img/const_s.png",
       content: [
         { type: "text", value: "A full **receiver** implemented end-to-end on a Xilinx **Virtex-6 ML605** board, designed to lock onto and decode a satellite signal with no prior knowledge of its parameters." },
         { type: "tabs", tabs: [
