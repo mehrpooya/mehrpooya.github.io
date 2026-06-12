@@ -184,7 +184,7 @@ window.SITE = {
       tag: "ZCU102 · ADRV9009",          // small mono label on the card
       featured: true,                     // featured cards are shown larger
       summary: "A 4-channel digital receiver built on two ADRV9009 transceivers, channelizing the wideband input and extracting per-sub-channel information in real time.",
-      thumb: "assets/img/chip.jpg",       // card image (replace with your own)
+      thumb: "assets/img/board.jpg",       // card image (replace with your own)
       content: [
         { type: "text", value: "This project implements a **4-channel coherent receiver** using two Analog Devices **ADRV9009** wideband transceiver chips on a Xilinx **ZCU102** UltraScale+ MPSoC board. The design captures a wide RF band, then digitally channelizes it into narrow sub-channels for independent processing." },
         { type: "specs", title: "Platform", rows: [
