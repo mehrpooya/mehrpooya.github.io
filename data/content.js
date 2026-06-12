@@ -225,7 +225,10 @@ window.SITE = {
             "Implements custom FPGA logic to interface with the USB controller and manage data flow.",
             "Develops Linux gadget drivers to facilitate communication between the host PC and the FPGA over USB."
         ]},
-        { type: "text", value: "You can go the corresponding documentation GitHub repository: https://github.com/mehrpooya/zcu102-usb-gadget-platform" },
+       { type: "links", items: [
+            { label: "GitHub Repository", href: "https://github.com/mehrpooya/zcu102-usb-gadget-platform" },
+            { label: "Read the Docs", href: "https://zcu102-usb-gadget-platform.readthedocs.io/en/latest/index.html" }
+        ]},
         { type: "image", src: "assets/img/board.jpg", caption: "USB-gadget-based platform on the ZCU102 board." }
       ]
     },
