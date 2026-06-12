@@ -184,7 +184,7 @@ window.SITE = {
       tag: "ZCU102 · ADRV9009",          // small mono label on the card
       featured: true,                     // featured cards are shown larger
       summary: "A 4-channel digital receiver built on two ADRV9009 transceivers, channelizing the wideband input and extracting per-sub-channel information in real time.",
-      thumb: "assets/img/board.jpg",       // card image (replace with your own)
+      thumb: "assets/img/chip.jpg",       // card image (replace with your own)
       content: [
         { type: "text", value: "This project implements a **4-channel coherent receiver** using two Analog Devices **ADRV9009** wideband transceiver chips on a Xilinx **ZCU102** UltraScale+ MPSoC board. The design captures a wide RF band, then digitally channelizes it into narrow sub-channels for independent processing." },
         { type: "specs", title: "Platform", rows: [
@@ -201,6 +201,32 @@ window.SITE = {
         ]},
         { type: "text", value: "_Tip: replace the image below with a block diagram or a scope capture of your own — drop it into the `projects-media` folder._" },
         { type: "image", src: "assets/img/chip.jpg", caption: "Replace with your own diagram, board photo or results plot." }
+      ]
+    },
+
+   {
+      id: "ZCU102 Gadget Platform",
+      title: "ZCU102 Gadget Platform",
+      tag: "ZCU102 · USB Gadget",          // small mono label on the card
+      featured: true,                     // featured cards are shown larger
+      summary: "A USB-gadget-based platform on the ZCU102, enabling high-speed data transfer and control between the FPGA and a host PC over USB 3.0.",
+      thumb: "assets/img/board.jpg",       // card image (replace with your own)
+      content: [
+        { type: "text", value: "This project implements a **USB-gadget-based platform** on the Xilinx **ZCU102** board, enabling high-speed data transfer and control between the FPGA and a host PC over USB 3.0." },
+        { type: "specs", title: "Platform", rows: [
+            ["Board", "Xilinx ZCU102 (UltraScale+ MPSoC)"],
+            ["USB mode", "USB 3.0 Gadget (Device)"],
+            ["Data transfer", "High-speed streaming and control"],
+            ["Key blocks", "USB controller, custom FPGA logic, Linux gadget drivers"]
+        ]},
+        { type: "heading", value: "What it does" },
+        { type: "list", items: [
+            "Enables high-speed data transfer and control between the FPGA and a host PC over USB 3.0.",
+            "Implements custom FPGA logic to interface with the USB controller and manage data flow.",
+            "Develops Linux gadget drivers to facilitate communication between the host PC and the FPGA over USB."
+        ]},
+        { type: "text", value: "" },
+        { type: "image", src: "assets/img/board.jpg", caption: "USB-gadget-based platform on the ZCU102 board." }
       ]
     },
 
